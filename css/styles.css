@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@400;700&display=swap');
+
+/* ====================================
+   1. RESET & VARIABLES
+   ==================================== */
+:root {
+  --color-border: #d9dfeb;
+  --color-bg: #f7f8fb;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f1f5f9;
+  --color-accent: #2563eb;
+
+  /* Spacing - a modular scale */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Typography */
+  --font-stack: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+  --text-base: 1rem;
+  --text-h3: 1.25rem;
+  --text-h2: 1.5rem;
+  --text-h1: 2.25rem;
+  --leading-body: 1.6;
+  --leading-heading: 1.2;
+
+  /* Layout */
+  --page-width: 64rem;
+  --radius-md: 8px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ====================================
+   2. TYPOGRAPHY & LINKS
+   ==================================== */
+h1 {
+  font-size: var(--text-h1);
+  line-height: var(--leading-heading);
+}
+
+h2 {
+  font-size: var(--text-h2);
+  line-height: var(--leading-heading);
+}
+
+h3 {
+  font-size: var(--text-h3);
+  line-height: var(--leading-heading);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ====================================
+   4. LAYOUT
+   ==================================== */
+body {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+  background-color: var(--color-bg);
+  font-family: var(--font-stack);
+  line-height: var(--leading-body);
+}
+
+/* ====================================
+   5. HEADER
+   ==================================== */
+header {
+  padding: var(--space-lg);
+  background-color: var(--color-surface-alt);
+  margin-bottom: var(--space-lg);
+}
+
+/* ====================================
+   6. SECTIONS
+   ==================================== */
+section {
+  margin-bottom: var(--space-xl);
+}
+
+/* ====================================
+   7. FORMS
+   ==================================== */
+label {
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  font: inherit;
+  margin-bottom: var(--space-md);
+}
+
+/* ====================================
+   10. CARDS & GRID
+   ==================================== */
+.empty-message {
+  grid-column: 1 / -1;
+}
+
+/* ====================================
+   11. FOOTER
+   ==================================== */
+footer {
+  grid-column: 1 / -1;
+}
+
+/* ====================================
+   12. RESPONSIVE
+   ==================================== */
+@media (min-width: 768px) {
+  .favorites-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
