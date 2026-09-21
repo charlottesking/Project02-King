@@ -132,6 +132,14 @@ main {
     grid-column: 1 / -1;
 }
 
+.favorite-card {
+    padding: var(--space-lg);
+    background-color: var(--color-surface);
+    border: 1px solid var(--radius-md);
+    border-radius: var(--radius-md)var(--leading-body);
+    box-shadow: var(--shadow-sm);
+}
+
 /* ==========================
    5. HEADER
    ========================== */
