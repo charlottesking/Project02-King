@@ -68,7 +68,7 @@ function searchFavorites() {
         <h3>${favorite.name}</h3>
         <span class="favorite-category">${favorite.category}</span>
         <div class="favorite-rating">${stars} (${favorite.rating}/5)</div>
-        <p class="favorite-notes">${favorite.notes}</p>
+        ${favorite.notes ? `<p class="favorite-notes">${favorite.notes}</p>` : ''}
         <p class="favorite-date">Added: ${favorite.dateAdded}</p>
         <button class="btn-danger" onclick="deleteFavorite(${index})">Delete</button>
       </div>`;
