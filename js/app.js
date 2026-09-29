@@ -52,6 +52,14 @@ function searchFavorites() {
 
   favoritesList.innerHTML = '';
 
+  if (filtered.length === 0) {
+    favoritesList.innerHTML = `
+      <p class="empty-message" style="color: var(--color-muted); font-style: italic;">
+        No favorites found matching your criteria.
+      </p>`;
+    return;
+  }
+
   filtered.forEach(function(favorite) {
     const index = favorites.indexOf(favorite);
     const stars = '★'.repeat(favorite.rating);
